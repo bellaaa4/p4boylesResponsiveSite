@@ -10,7 +10,42 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400"> 
     <link rel="stylesheet" href="css/bootstrap.min.css">                                     
     <link rel="stylesheet" href="css/style.css">
+<style>
+	/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
 
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+	
+	</style>
 
 </head>
 
@@ -40,7 +75,7 @@
                                     <a href="menu.html" class="nav-link">Menu</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="gallery.html" class="nav-link">Gallery</a>
+                                    <a href="faq.html" class="nav-link">FAQ&nbsp;</a>
                                 </li>
                                 <li class="nav-item active">
                                     <a href="contact.html" class="nav-link">Contact</a>
@@ -57,235 +92,46 @@
         <div class="contact-img-container">
             
         </div>
+	<div style= "text-align: center;">
+		<h1> Contact</h1>
+		
 
-        <section class="section">
+      <div style="align-content:left">
+        <div class="container">
+  <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+			</div>
+</div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3338.640958677165!2d-117.38347102288915!3d33.19728887349093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc6e36e0378a05%3A0x2e7ea5ebeed33058!2s101%20Bagels%20%26%20Subs!5e0!3m2!1sen!2sus!4v1764620117330!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  <section class="section">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-
-                        <section>
-                            <h3 class="gold-text form-title">Pellentesque fermentum mauris</h3>
-                            <p class="form-description">Vivamus accumsan blandit ligula. Sed lobortis efficitur sapien. Quisque vel sem eu turpis ullamcorper euismod. Praesent quis nisi ac augue luctus viverra. Sed et dui nisi. Fusce vitae dapibus justo.</p> 
-
-
-                            <form action="index.html" method="post" class="contact-form">                                
-                                <div class="form-group">
-                                    <input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" id="contact_email" name="contact_email" class="form-control" placeholder="Email"  required/>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" id="contact_subject" name="contact_subject" class="form-control" placeholder="Subject"  required/>
-                                </div>
-                                <div class="form-group">
-                                    <textarea id="contact_message" name="contact_message" class="form-control" rows="6" placeholder="Message" required></textarea>
-                                </div>
-                            
-                                <button type="submit" class="btn">Submit</button>                          
-                            </form>   
-                        </section>
-                        
-                        <section class="margin-t-mid map-section">
-                            <h3 class="gold-text form-title">Pellentesque fermentum mauris</h3>
-
-                            <div id="google-map"></div>
-
-                            <p class="form-description">Morbi vel pharetra massa, non iaculis tortor. Nulla porttitor tincidunt felis et feugiat. Vivamus fermentum ligula justo, sit amet blandit nisl volutpat id.</p>
-
-                            <p class="m-b-0">Donec mattis ipsum in erat viverra commodo. 
-                                Proin sapien lacus, euismod eget nisl in, 
-                                elementum posuere massa. Curabitur a odio
-                                eros. Cras aliquam lectus erat, non semper est
-                                volutpat eget. Ut eget erat tincidunt.</p>
-
-                            <a href="#" class="btn margin-t-small">Detail</a> 
-                        </section>                        
-                 
-
-                    </div>
-
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contact-right">
-                        
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                <div class="aside-container">
-                                    <h3 class="gold-text title">
-                                        Categories
-                                    </h3>
-                                    <nav>
-                                        <ul class="nav">
-                                            <li><a href="#" class="text-link">Lorem ipsum dolor sit</a></li>
-                                            <li><a href="#" class="text-link">Tincidunt non faucibus placerat</a></li>
-                                            <li><a href="#" class="text-link">Vestibulum tempor ac lectus</a></li>
-                                            <li><a href="#" class="text-link">Elementum egestas dui</a></li>
-                                            <li><a href="#" class="text-link">Nam in augue consectetur</a></li>
-                                            <li><a href="#" class="text-link">Text Link Color #006699</a></li>
-                                        </ul>
-                                    </nav>
-                                    <hr class="margin-t-small">   
-                                    <h3 class="gold-text title margin-t-small">
-                                        Useful Links
-                                    </h3>
-                                    <nav>   
-                                        <ul class="nav">
-                                            <li><a href="#" class="text-link">Suspendisse sed dui nulla</a></li>
-                                            <li><a href="#" class="text-link">Lorem ipsum dolor sit</a></li>
-                                            <li><a href="#" class="text-link">Duiss nec purus et eros</a></li>
-                                            <li><a href="#" class="text-link">Etiam pulvinar et ligula sed</a></li>
-                                            <li><a href="#" class="text-link">Proin egestas eu felis et iaculis</a></li>
-                                            <li><a href="#" class="text-link">Fusce non turpis euismod</a></li>
-                                        </ul>
-                                    </nav>      
-                                </div>
-                                 
-                            </div>
-
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                
-                                <div class="content-box content-box-contact">
-                                    <img src="img/img-310x180-1.jpg" alt="Image" class="margin-b-20 img-fluid">
-                                    <h4 class="margin-b-20 gold-text">Lorem ipsum dolor #1</h4>
-                                    <p class="margin-b-20 p-small">Aenean cursus tellus mauris, quis
-                                    consequat mauris dapibus id. Donec
-                                    scelerisque porttitor pharetra</p>
-                                    <a href="#" class="btn text-uppercase">Detail</a>    
-                                </div> 
-
-                                <div class="content-box margin-t-mid content-box-contact">
-                                    <img src="img/img-310x180-2.jpg" alt="Image" class="margin-b-20 img-fluid">
-                                    <h4 class="margin-b-20 gold-text">Lorem ipsum dolor #2</h4>
-                                    <p class="margin-b-20 p-small">Aenean cursus tellus mauris, quis
-                                    consequat mauris dapibus id. Donec
-                                    scelerisque porttitor pharetra</p>
-                                    <a href="#" class="btn text-uppercase">Read More</a>    
-                                </div>  
-
-                            </div>
-                        </div>
-                        <hr class="margin-t-mid">
-                        <div class="row contact-row-related-posts">
-                            <div class="col-xs-12">
-                                
-                                <div class="contact-related-posts-container">
-                                    <h3 class="gold-text title margin-b-30">Related Posts</h3>
-                                    <div class="media related-post">
-                                      <div class="media-left media-middle">
-                                        <a href="#">
-                                          <img class="media-object" src="img/img-240x120-1.jpg" alt="Generic placeholder image">
-                                        </a>
-                                      </div>
-                                      <div class="media-body">
-                                        <a href="#"><h4 class="media-heading gold-text margin-b-15">Lorem ipsum dolor</h4></a>
-                                        <p class="small-font media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                                      </div>
-                                    </div>
-                                    <div class="media related-post">
-                                      <div class="media-left media-middle">
-                                        <a href="#">
-                                          <img class="media-object" src="img/img-240x120-2.jpg" alt="Generic placeholder image">
-                                        </a>
-                                      </div>
-                                      <div class="media-body">
-                                        <a href="#"><h4 class="media-heading gold-text margin-b-15">Lorem ipsum dolor</h4></a>
-                                        <p class="small-font media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                                      </div>
-                                    </div>
-                                    <div class="media related-post">
-                                      <div class="media-left media-middle">
-                                        <a href="#">
-                                          <img class="media-object" src="img/img-240x120-3.jpg" alt="Generic placeholder image">
-                                        </a>
-                                      </div>
-                                      <div class="media-body">
-                                        <a href="#"><h4 class="media-heading gold-text margin-b-15">Lorem ipsum dolor</h4></a>
-                                        <p class="small-font media-description">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                                      </div>
-                                    </div>
-                                </div>                                
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
+                <div class="row"></div>
 
             </div>
         </section>
-        
-        <footer class="footer">
+    <footer class="footer">
             <div class="container-fluid">
                 <div class="row">
-                    
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                        
-                        <div class="footer-content-box">
-                            <h3 class="gold-text title footer-content-box-title">Proin eu posuere felis</h3>
-                            <div class="gray-bg">
-                                <p>You can download, modify and use Classic HTML CSS template from templatemo.com website.</p>
-                                <p>Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                                <p><strong>Danny Egg (Executive)</strong></p>    
-                            </div>    
-                        </div>
-                                                
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-                        <div class="footer-content-box footer-links-container">
-                        
-                            <h3 class="gold-text title footer-content-box-title">Nulla tortor dolor</h3>
-                            <nav>
-                                <ul class="nav">
-                                    <li><a href="#" class="footer-link">Tincidunt non faucibus</a></li>
-                                    <li><a href="#" class="footer-link">Vestibulum tempor</a></li>
-                                    <li><a href="#" class="footer-link">Fusce non turpis euismod</a></li>
-                                    <li><a href="#" class="footer-link">Lorem ipsum dolor sit</a></li>
-                                    <li><a href="#" class="footer-link">Nam in augue consectetur</a></li>
-                                    <li><a href="#" class="footer-link">Text Link Color #CCCC66</a></li>
-                                </ul>
-                            </nav>
-
-                        </div>
-                        
-                    </div>
-
-                    <div class="clearfix hidden-lg-up"></div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                        <div class="footer-content-box">
-                        
-                            <h3 class="gold-text title footer-content-box-title">Etiam mollis ornare</h3>
-                            <p class="margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p><hr class="margin-b-30">
-                            <p class="margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p><hr class="margin-b-30">
-                            <p class="margin-b-30">Aenean cursus tellus mauris, quis consequat mauris dapibus id. Donec scelerisque porttitor pharetra.</p>
-                            <a href="#" class="btn btn-gray text-uppercase">Read More</a>
-
-                        </div>
-                        
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-
-                        <div class="footer-content-box">
-                        
-                            <h3 class="gold-text title footer-content-box-title">Fusce non turpis</h3>
-                            <div class="margin-b-30">
-                                <img src="img/img-100x100-1.jpg" alt="Image" class="footer-thumbnail">
-                                <img src="img/img-100x100-2.jpg" alt="Image" class="footer-thumbnail">
-                                <img src="img/img-100x100-3.jpg" alt="Image" class="footer-thumbnail">
-                                <img src="img/img-100x100-4.jpg" alt="Image" class="footer-thumbnail">
-                                <img src="img/img-100x100-5.jpg" alt="Image" class="footer-thumbnail">
-                                <img src="img/img-100x100-6.jpg" alt="Image" class="footer-thumbnail">
-                            </div>
-                            <p class="margin-b-20">Curabitur dui massa, aliquam quis mi sed, tempor vulputate tellus. Sed vestibulum non neque.</p>
-                            <a href="#" class="btn btn-gray text-uppercase">Browse</a>
-
-                        </div>
-                        
-                    </div>
-
-
+                  <div class="clearfix hidden-lg-up"></div>
                 </div>
 
                 <div class="row">
@@ -300,49 +146,7 @@
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>  
         <script src="js/bootstrap.min.js"></script>
-        <script>     
-       
-
-            var map = '';
-            var center;
-
-            function initialize() {
-                var mapOptions = {
-                    zoom: 16,
-                    center: new google.maps.LatLng(13.758468,100.567481),
-                    scrollwheel: false
-                };
-            
-                map = new google.maps.Map(document.getElementById('google-map'),  mapOptions);
-
-                google.maps.event.addDomListener(map, 'idle', function() {
-                  calculateCenter();
-                });
-            
-                google.maps.event.addDomListener(window, 'resize', function() {
-                  map.setCenter(center);
-                });
-            }
-
-            function calculateCenter() {
-                center = map.getCenter();
-            }
-
-            function loadGoogleMap(){
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' + 'callback=initialize';
-                document.body.appendChild(script);
-            }
-        
- 
-            $(function() {
-
-
-                loadGoogleMap();
-            });
-
-        </script>             
+                
 
 </body>
 </html>
